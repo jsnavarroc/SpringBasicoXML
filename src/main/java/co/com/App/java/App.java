@@ -14,7 +14,7 @@ public class App {
 		*/
 		//Patron de diseño facotria 
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-		Persona per = (Persona) context.getBean("persona");
+		Persona per = (Persona) context.getBean("persona");//toma el id del xml
 		System.out.println("Nombre>>"+per.getApellidos());
 	}
 }

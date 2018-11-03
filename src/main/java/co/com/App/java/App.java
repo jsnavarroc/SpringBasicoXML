@@ -1,6 +1,7 @@
 package co.com.App.java;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import co.com.ias.model.Persona;
@@ -16,5 +17,6 @@ public class App {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		Persona per = (Persona) context.getBean("persona");//toma el id del xml
 		System.out.println("Nombre>>"+per.getApellidos());
+		((ConfigurableApplicationContext) context).close();
 	}
 }

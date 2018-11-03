@@ -4,9 +4,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="persona" class="co.com.ias.model.Persona">
-		<property name="id" value="1"></property>
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="Johan"></constructor-arg>
+		<constructor-arg value="Nava"></constructor-arg>
+		<!--<property name="id" value="1"></property>
 		<property name="nombres" value="Johan"></property>
-		<property name="apellidos" value="Navarro"></property> 
+		<property name="apellidos" value="Navarro"></property>--> 
 	</bean>
+	<bean id="PersonaServices" class="co.com.ias.service.PersonaServiceImpl"></bean>
 
 </beans>
